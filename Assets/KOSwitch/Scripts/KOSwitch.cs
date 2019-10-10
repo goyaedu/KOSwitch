@@ -16,6 +16,9 @@ public class KOSwitch : MonoBehaviour
     Image backgroundImage;                  // 스위치 배경 이미지
     RectTransform handleRectTransform;      // 스위치 핸들 RectTransform
 
+    // Coroutine
+    Coroutine moveHandleCoroutine;          // 핸들 이동 코루틴
+
     void Start()
     {
         // Handle 초기화
@@ -40,7 +43,12 @@ public class KOSwitch : MonoBehaviour
         float ratio = Mathf.Abs(distance.x) / totalHandleMoveLength;
         float duration = moveDuration * ratio;
 
-        StartCoroutine(moveHandle(fromPosition, toPosition, duration));
+        if (moveHandleCoroutine != null)
+        {
+            StopCoroutine(moveHandleCoroutine);
+            moveHandleCoroutine = null;
+        }
+        moveHandleCoroutine = StartCoroutine(moveHandle(fromPosition, toPosition, duration));
     }
 
     /// <summary>
