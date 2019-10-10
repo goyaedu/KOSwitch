@@ -511,6 +511,8 @@ GameObject:
   - component: {fileID: 801343324}
   - component: {fileID: 801343326}
   - component: {fileID: 801343325}
+  - component: {fileID: 801343327}
+  - component: {fileID: 801343328}
   m_Layer: 5
   m_Name: Switch
   m_TagString: Untagged
@@ -573,3 +575,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801343323}
   m_CullTransparentMesh: 0
+--- !u!114 &801343327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801343323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf04bc0e8f9abb7488959857f614f2f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  moveDuration: 1.5
+--- !u!114 &801343328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801343323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 801343327}
+          m_MethodName: OnClickSwitch
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  delegates: []
