@@ -588,7 +588,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  moveDuration: 1.5
+  moveDuration: 3
+  handleColor: {r: 1, g: 1, b: 1, a: 1}
+  offBackgroundColor: {r: 0, g: 0, b: 1, a: 1}
+  onBackgroundColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &801343328
 MonoBehaviour:
   m_ObjectHideFlags: 0
